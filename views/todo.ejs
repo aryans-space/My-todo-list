@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+             crossorigin="anonymous">
+        </script>
+
+
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div id="d1">
+                <H1 style="text-align: center; font-family: cursive;">My To-Do list</H1>
+                <marquee behavior="alternate" scrollamount="10">  
+                You can only manage time if you track it right....
+                </marquee>  
+              
+        </div>
+        
+        <div id="todo-table">
+            <form>
+                <input type="text" name="item" placeholder="Add new item ..." required>
+                <button type="submit" >Add Item</button>
+            </form>
+
+            <ul>
+                <% for(var i=0;i<todos.length;i++){%>
+                <li><%=todos[i].item %></li>
+                <% } %>
+            </ul>
+        </div>
+    
+        <script type="text/javascript" src="assets/todo-list.js"></script>
+    </body>
+</html>
